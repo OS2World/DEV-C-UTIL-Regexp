@@ -1,0 +1,5 @@
+CFLAGS=$CFLAGS -dvoid=int -dCHARBITS=0377 -dSTATIC=extern -dDEBUG -dBUFSIZ=512
+
+try.exe : try.obj regexp.obj regsub.obj
+	link try regexp regsub,try,nul,c:\ci\lib\c86s2s;
+
